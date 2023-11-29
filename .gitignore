@@ -1,1 +1,6 @@
-*/__pycache__/
+
+*.gif
+*_*_*.py
+*_*_*.ipynb
+__pycache__
+plot/*/*
