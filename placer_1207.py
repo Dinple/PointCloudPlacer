@@ -11,7 +11,6 @@ from torch.nn import functional as F
 # JAX
 from jax import grad, value_and_grad
 from jax import numpy as jnp
-from jax import device_put
 
 # pickle for saving&loading
 import pickle
@@ -341,7 +340,7 @@ class PCBPlacer:
                 savefig=True, filename="./plot/plot04/placement_%d.png" % i
             )
 
-    def _Wa_obj(self, pin_mat, SMOOTHNESS=1.0):
+    def Wa_obj(self, pin_mat, SMOOTHNESS=1.0):
         """Weighted Average Wirelength
         X: n x 2 matrix of x,y coordinates
         """
@@ -362,22 +361,6 @@ class PCBPlacer:
 
         return x_term1 - x_term2 + y_term1 - y_term2
 
-    def Wa_obj(self, net_to_pin_coords, net_to_insts, SMOOTHNESS=1.0):
-        Wa_sum = 0
-        for key, pin_value, inst_value in zip(
-            net_to_pin_coords.keys(), net_to_pin_coords.values(), net_to_insts.values()
-        ):
-            # get the pin coordinates
-            pin_coords = jnp.array(pin_value)
-            # compute the weighted average wirelength only between the first pin and the rest
-            for i in range(1, len(pin_coords)):
-                # compute the weighted average wirelength
-                v = self._Wa_obj(
-                    np.array([pin_coords[0], pin_coords[i]]), SMOOTHNESS=SMOOTHNESS
-                )
-                Wa_sum += v
-        return Wa_sum
-
     def Wa_obj_grad(self, net_to_pin_coords, net_to_insts, SMOOTHNESS=1.0):
         Wa_sum = 0
         pin_grad_to_inst = {}  # aggregate the pin gradients for each instance
@@ -389,7 +372,7 @@ class PCBPlacer:
             # compute the weighted average wirelength only between the first pin and the rest
             for i in range(1, len(pin_coords)):
                 # compute the weighted average wirelength
-                v, g = value_and_grad(self._Wa_obj)(
+                v, g = value_and_grad(self.Wa_obj)(
                     np.array([pin_coords[0], pin_coords[i]]), SMOOTHNESS=SMOOTHNESS
                 )
                 Wa_sum += v
@@ -745,7 +728,6 @@ class PCBPlacer:
             return dx * dy
 
         # get a vector of x and y coordinates of all boxes
-        canvas_dims = device_put(canvas_dims)
         width = canvas_dims[0] - canvas_dims[2]
         height = canvas_dims[1] - canvas_dims[3]
 
@@ -759,53 +741,36 @@ class PCBPlacer:
         # num of components
         num_comp = len(compx_)
 
-        num_bin_lst = jnp.array([i for i in range(num_bin)])
         # x coordinates of bins
-        bin_x = jnp.array(canvas_dims[2] + (num_bin_lst % num_bin_x) * bin_size_x + bin_size_x / 2)
-        bin_x = device_put(bin_x)
+        bin_x = jnp.array(
+            [
+                canvas_dims[2] + (j % num_bin_x) * bin_size_x + bin_size_x / 2
+                for j in range(num_bin)
+            ]
+        )
+
         # y coordinates of bins
-        bin_y = jnp.array(canvas_dims[3] + (num_bin_lst // num_bin_x) * bin_size_y + bin_size_y / 2)
-        bin_y = device_put(bin_y)
+        bin_y = jnp.array(
+            [
+                canvas_dims[3] + (j // num_bin_x) * bin_size_y + bin_size_y / 2
+                for j in range(num_bin)
+            ]
+        )
 
-        # Check overlap
-        # Expand the bin and component dimensions for broadcasting
-        bin_x_expanded = bin_x[:, None]  # Shape: (num_bins, 1)
-        bin_y_expanded = bin_y[:, None]  # Shape: (num_bins, 1)
-        bin_y_expanded = device_put(bin_y_expanded)
-        bin_x_expanded = device_put(bin_x_expanded)
-        compx_ = jnp.array(compx_)
-        compy_ = jnp.array(compy_)
-        compw_ = jnp.array(compw_)
-        comph_ = jnp.array(comph_)
-        compx_ = device_put(compx_)
-        compy_ = device_put(compy_)
-        compw_ = device_put(compw_)
-        comph_ = device_put(comph_)
-        # Calculate overlap in x and y dimensions
-        x_overlap_bool = jnp.logical_and(bin_x_expanded < compx_ + compw_, bin_x_expanded + bin_size_x > compx_)
-        y_overlap_bool = jnp.logical_and(bin_y_expanded < compy_ + comph_, bin_y_expanded + bin_size_y > compy_)
-        overlap = jnp.logical_and(x_overlap_bool, y_overlap_bool)
+        bin_density = jnp.array([0.0 for j in range(num_bin)])
 
-        # Compute overlap area
-        # Calculate overlap in each dimension
-        x_overlap = jnp.minimum(bin_x_expanded + bin_size_x/2, compx_ + compw_/2) - jnp.maximum(bin_x_expanded - bin_size_x/2, compx_ - compw_/2)
-        y_overlap = jnp.minimum(bin_y_expanded + bin_size_y/2, compy_ + comph_/2) - jnp.maximum(bin_y_expanded - bin_size_y/2, compy_ - comph_/2)
-        
-        # Zero out negative overlaps (no overlap case)
-        x_overlap = jnp.maximum(x_overlap, 0)
-        y_overlap = jnp.maximum(y_overlap, 0)
-
-        overlap_area  = x_overlap * y_overlap
-        bin_density = np.sum(overlap_area * overlap, axis=1)
-
-
+        # gather all the components that overlap with the bin
+        for bin_i, (bin_x_i, bin_y_i) in enumerate(zip(bin_x, bin_y)):
+            for comp_i, (comp_x_i, comp_y_i, comp_w_i, comp_h_i) in enumerate(zip(compx_, compy_, compw_, comph_)):
+                # check if the component overlaps with the bin
+                if check_overlap(bin_x_i, bin_y_i, bin_size_x, bin_size_y, comp_x_i, comp_y_i, comp_w_i, comp_h_i):
+                    bin_density = bin_density.at[bin_i].add(compute_overlap_area(bin_x_i, bin_y_i, bin_size_x, bin_size_y, comp_x_i, comp_y_i, comp_w_i, comp_h_i))
 
         # divide the bin density by the bin size
         bin_density = bin_density / (bin_size_x * bin_size_y)
 
         # compute the max density
         max_density = jnp.max(bin_density)
-        # print(f'max_density={max_density}')
 
         return max_density
 

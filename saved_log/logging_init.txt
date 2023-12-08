@@ -1,0 +1,180 @@
+     [INFO] p_inst for instance 0: [0. 0.]
+     [INFO] d_grad_x for instance 0: 0.003216056851670146
+     [INFO] Instance 0 is not updated at (39.0, 39.5) with displacement (0.0, 0.0) due to OOB
+     [INFO] p_inst for instance 1: [0. 0.]
+     [INFO] d_grad_x for instance 1: 0.002698080148547888
+     [INFO] Instance 1 is not updated at (37.0, 46.0) with displacement (0.0, 0.0) due to OOB
+     [INFO] p_inst for instance 2: [ 0.0000000e+00 -5.9604645e-08]
+     [INFO] d_grad_x for instance 2: -0.024790314957499504
+     [INFO] Updating instance 2 from (48.0, 41.5) to (48.0, 41.5) with displacement (0.0, -5.960464477539063e-08)
+     [INFO] p_inst for instance 3: [ 0.0000000e+00 -5.9604645e-08]
+     [INFO] d_grad_x for instance 3: 0.0062896376475691795
+     [INFO] Updating instance 3 from (43.5, 46.5) to (43.5, 46.5) with displacement (0.0, -1.1920928955078125e-07)
+[INFO] iter 1 done: prev_eq_2: 1.174918532371521, curr_eq_2: 20.411903381347656, delta_eq_2: 19.236984252929688
+     [INFO] WA:  19.23698
+     [INFO] Density:  1.1749223
+     [INFO] p_inst for instance 0: [-0.32856676  0.11944702]
+     [INFO] d_grad_x for instance 0: 0.003216056851670146
+     [INFO] Updating instance 0 from (39.0, 39.5) to (38.67143249511719, 39.61944580078125) with displacement (-0.3285667598247528, 0.1194470226764679)
+     [INFO] p_inst for instance 1: [0.5668949  0.31879392]
+     [INFO] d_grad_x for instance 1: 0.002698080148547888
+     [INFO] Updating instance 1 from (37.0, 46.0) to (37.23832702636719, 46.43824005126953) with displacement (0.23832812905311584, 0.4382409453392029)
+     [INFO] p_inst for instance 2: [-0.5271386  -0.03020513]
+     [INFO] d_grad_x for instance 2: -0.024790314957499504
+     [INFO] Updating instance 2 from (48.0, 41.5) to (47.71118927001953, 41.90803527832031) with displacement (-0.28881046175956726, 0.4080358147621155)
+     [INFO] p_inst for instance 3: [ 0.36846605 -0.62719977]
+     [INFO] d_grad_x for instance 3: 0.0062896376475691795
+     [INFO] Updating instance 3 from (43.5, 46.5) to (43.579654693603516, 46.28083419799805) with displacement (0.07965558767318726, -0.2191639542579651)
+     [INFO] p_inst for instance 4: [-0.07965568  0.2191639 ]
+     [INFO] d_grad_x for instance 4: 0.002992835594341159
+     [INFO] Updating instance 4 from (37.0, 38.0) to (37.0, 38.0) with displacement (-8.940696716308594e-08, -5.960464477539063e-08)
+     [INFO] p_inst for instance 5: [-0.14949858  0.03861427]
+     [INFO] d_grad_x for instance 5: 0.0029309275560081005
+     [INFO] Updating instance 5 from (36.5, 48.0) to (36.350502014160156, 48.038612365722656) with displacement (-0.14949867129325867, 0.03861421346664429)
+     [INFO] p_inst for instance 6: [0.49764392 0.08828005]
+     [INFO] d_grad_x for instance 6: -0.027855871245265007
+     [INFO] Updating instance 6 from (46.0, 32.0) to (46.34814453125, 32.126895904541016) with displacement (0.3481452465057373, 0.1268942654132843)
+     [INFO] p_inst for instance 7: [-0.19931355  0.23720622]
+     [INFO] d_grad_x for instance 7: 0.034843362867832184
+     [INFO] Updating instance 7 from (33.0, 35.0) to (33.14883041381836, 35.36410140991211) with displacement (0.14883169531822205, 0.36410048604011536)
+     [INFO] p_inst for instance 8: [-0.5471873 -1.0463098]
+     [INFO] d_grad_x for instance 8: 0.007997328415513039
+     [INFO] Updating instance 8 from (41.5, 40.5) to (41.10164260864258, 39.81779098510742) with displacement (-0.398355633020401, -0.6822093725204468)
+     [INFO] p_inst for instance 9: [0.39835563 0.68220913]
+     [INFO] d_grad_x for instance 9: 0.009290189482271671
+     [INFO] Updating instance 9 from (42.5, 52.5) to (42.5, 52.5) with displacement (0.0, -2.384185791015625e-07)
+[INFO] iter 2 done: prev_eq_2: 20.411903381347656, curr_eq_2: 20.095415115356445, delta_eq_2: 0.31648826599121094
+     [INFO] WA:  18.905495
+     [INFO] Density:  1.1899209
+     [INFO] p_inst for instance 0: [-0.34791082  0.13195255]
+     [INFO] d_grad_x for instance 0: 0.0027167487423866987
+     [INFO] Updating instance 0 from (38.67143249511719, 39.61944580078125) to (38.32352066040039, 39.751399993896484) with displacement (-0.3479108214378357, 0.13195255398750305)
+     [INFO] p_inst for instance 1: [0.5514761  0.36001197]
+     [INFO] d_grad_x for instance 1: 0.0028803981840610504
+     [INFO] Updating instance 1 from (37.23832702636719, 46.43824005126953) to (37.441890716552734, 46.930206298828125) with displacement (0.2035652995109558, 0.49196451902389526)
+     [INFO] p_inst for instance 2: [-0.51383924 -0.02961996]
+     [INFO] d_grad_x for instance 2: -0.02180340141057968
+     [INFO] Updating instance 2 from (47.71118927001953, 41.90803527832031) to (47.400917053222656, 42.37038040161133) with displacement (-0.3102739453315735, 0.46234455704689026)
+     [INFO] p_inst for instance 3: [ 0.41629267 -0.6140804 ]
+     [INFO] d_grad_x for instance 3: 0.005721839610487223
+     [INFO] Updating instance 3 from (43.579654693603516, 46.28083419799805) to (43.685672760009766, 46.12909698486328) with displacement (0.10601872205734253, -0.15173587203025818)
+     [INFO] p_inst for instance 4: [-0.10601887  0.1517357 ]
+     [INFO] d_grad_x for instance 4: 0.002304796362295747
+     [INFO] Updating instance 4 from (37.0, 38.0) to (37.0, 38.0) with displacement (-1.4901161193847656e-07, -1.7881393432617188e-07)
+     [INFO] p_inst for instance 5: [-0.13207233  0.06989264]
+     [INFO] d_grad_x for instance 5: 0.002530142432078719
+     [INFO] Updating instance 5 from (36.350502014160156, 48.038612365722656) to (36.21842956542969, 48.10850524902344) with displacement (-0.13207247853279114, 0.06989246606826782)
+     [INFO] p_inst for instance 6: [0.49927288 0.05425251]
+     [INFO] d_grad_x for instance 6: -0.03782940283417702
+     [INFO] Updating instance 6 from (46.34814453125, 32.126895904541016) to (46.7153434753418, 32.251041412353516) with displacement (0.36720040440559387, 0.12414497137069702)
+     [INFO] p_inst for instance 7: [-0.22052723  0.22884235]
+     [INFO] d_grad_x for instance 7: 0.03338570520281792
+     [INFO] Updating instance 7 from (33.14883041381836, 35.36410140991211) to (33.295501708984375, 35.71709060668945) with displacement (0.14667317271232605, 0.3529873192310333)
+     [INFO] p_inst for instance 8: [-0.53874046 -1.0232244 ]
+     [INFO] d_grad_x for instance 8: 0.006529514212161303
+     [INFO] Updating instance 8 from (41.10164260864258, 39.81779098510742) to (40.70957565307617, 39.147552490234375) with displacement (-0.3920672833919525, -0.6702370643615723)
+     [INFO] p_inst for instance 9: [0.3920675 0.6702368]
+     [INFO] d_grad_x for instance 9: 0.008999187499284744
+     [INFO] Updating instance 9 from (42.5, 52.5) to (42.5, 52.5) with displacement (2.086162567138672e-07, -2.384185791015625e-07)
+[INFO] iter 3 done: prev_eq_2: 20.095415115356445, curr_eq_2: 19.982574462890625, delta_eq_2: 0.11284065246582031
+     [INFO] WA:  18.785252
+     [INFO] Density:  1.1973231
+     [INFO] p_inst for instance 0: [-0.368843    0.14418817]
+     [INFO] d_grad_x for instance 0: 0.002177916932851076
+     [INFO] Updating instance 0 from (38.32352066040039, 39.751399993896484) to (37.95467758178711, 39.89558792114258) with displacement (-0.3688429892063141, 0.14418816566467285)
+     [INFO] p_inst for instance 1: [0.5342227  0.40507752]
+     [INFO] d_grad_x for instance 1: 0.0030615518335253
+     [INFO] Updating instance 1 from (37.441890716552734, 46.930206298828125) to (37.607269287109375, 47.47947311401367) with displacement (0.16537973284721375, 0.5492656826972961)
+     [INFO] p_inst for instance 2: [-0.5002097  -0.03054014]
+     [INFO] d_grad_x for instance 2: -0.018826065585017204
+     [INFO] Updating instance 2 from (47.400917053222656, 42.37038040161133) to (47.06608581542969, 42.88910675048828) with displacement (-0.3348299562931061, 0.5187255144119263)
+     [INFO] p_inst for instance 3: [ 0.46625882 -0.60268056]
+     [INFO] d_grad_x for instance 3: 0.0052040922455489635
+     [INFO] Updating instance 3 from (43.685672760009766, 46.12909698486328) to (43.817100524902344, 46.045143127441406) with displacement (0.13142886757850647, -0.08395504951477051)
+     [INFO] p_inst for instance 4: [-0.13142914  0.08395436]
+     [INFO] d_grad_x for instance 4: 0.0012248792918398976
+     [INFO] Updating instance 4 from (37.0, 38.0) to (37.0, 38.0) with displacement (-2.682209014892578e-07, -6.854534149169922e-07)
+     [INFO] p_inst for instance 5: [-0.1182422   0.10368857]
+     [INFO] d_grad_x for instance 5: 0.0022326342295855284
+     [INFO] Updating instance 5 from (36.21842956542969, 48.10850524902344) to (36.10018539428711, 48.21219253540039) with displacement (-0.11824247241020203, 0.10368788242340088)
+     [INFO] p_inst for instance 6: [0.503372   0.02407143]
+     [INFO] d_grad_x for instance 6: -0.04739728942513466
+     [INFO] Updating instance 6 from (46.7153434753418, 32.251041412353516) to (47.10047149658203, 32.37879943847656) with displacement (0.38512954115867615, 0.12775930762290955)
+     [INFO] p_inst for instance 7: [-0.24013492  0.22073895]
+     [INFO] d_grad_x for instance 7: 0.03170371800661087
+     [INFO] Updating instance 7 from (33.295501708984375, 35.71709060668945) to (33.440494537353516, 36.065589904785156) with displacement (0.1449946165084839, 0.34849825501441956)
+     [INFO] p_inst for instance 8: [-0.5306314 -1.0039165]
+     [INFO] d_grad_x for instance 8: 0.004249746445566416
+     [INFO] Updating instance 8 from (40.70957565307617, 39.147552490234375) to (40.32394027709961, 38.49213409423828) with displacement (-0.3856368064880371, -0.6554182767868042)
+     [INFO] p_inst for instance 9: [0.3856359 0.6554173]
+     [INFO] d_grad_x for instance 9: 0.008748679421842098
+     [INFO] Updating instance 9 from (42.5, 52.5) to (42.5, 52.5) with displacement (-8.940696716308594e-07, -9.5367431640625e-07)
+[INFO] iter 4 done: prev_eq_2: 19.982574462890625, curr_eq_2: 20.069141387939453, delta_eq_2: 0.08656692504882812
+     [INFO] WA:  18.872612
+     [INFO] Density:  1.1965297
+     [INFO] p_inst for instance 0: [-0.39140075  0.15590483]
+     [INFO] d_grad_x for instance 0: 0.0016585192643105984
+     [INFO] Updating instance 0 from (37.95467758178711, 39.89558792114258) to (37.56327819824219, 40.05149459838867) with displacement (-0.3914007544517517, 0.1559048295021057)
+     [INFO] p_inst for instance 1: [0.5149423  0.45395574]
+     [INFO] d_grad_x for instance 1: 0.0032391452696174383
+     [INFO] Updating instance 1 from (37.607269287109375, 47.47947311401367) to (37.730812072753906, 48.089332580566406) with displacement (0.12354153394699097, 0.6098605394363403)
+     [INFO] p_inst for instance 2: [-0.48613584 -0.03318414]
+     [INFO] d_grad_x for instance 2: -0.015940407291054726
+     [INFO] Updating instance 2 from (47.06608581542969, 42.88910675048828) to (46.7034912109375, 43.465782165527344) with displacement (-0.3625943064689636, 0.5766763687133789)
+     [INFO] p_inst for instance 3: [ 0.51834965 -0.59259   ]
+     [INFO] d_grad_x for instance 3: 0.004708471707999706
+     [INFO] Updating instance 3 from (43.817100524902344, 46.045143127441406) to (43.97285461425781, 46.02922821044922) with displacement (0.15575534105300903, -0.01591360569000244)
+     [INFO] p_inst for instance 4: [-0.15575492  0.01591396]
+     [INFO] d_grad_x for instance 4: -0.00023178455012384802
+     [INFO] Updating instance 4 from (37.0, 38.0) to (37.0, 38.0) with displacement (4.172325134277344e-07, 3.5762786865234375e-07)
+     [INFO] p_inst for instance 5: [-0.10820079  0.14009717]
+     [INFO] d_grad_x for instance 5: 0.0020074895583093166
+     [INFO] Updating instance 5 from (36.10018539428711, 48.21219253540039) to (35.99198532104492, 48.352291107177734) with displacement (-0.10820037126541138, 0.14009752869606018)
+     [INFO] p_inst for instance 6: [ 0.5099967  -0.00247583]
+     [INFO] d_grad_x for instance 6: -0.055677399039268494
+     [INFO] Updating instance 6 from (47.10047149658203, 32.37879943847656) to (47.50226593017578, 32.516422271728516) with displacement (0.4017963409423828, 0.1376217007637024)
+     [INFO] p_inst for instance 7: [-0.2583437   0.21289328]
+     [INFO] d_grad_x for instance 7: 0.029754165560007095
+     [INFO] Updating instance 7 from (33.440494537353516, 36.065589904785156) to (33.583946228027344, 36.41610336303711) with displacement (0.14345264434814453, 0.3505149781703949)
+     [INFO] p_inst for instance 8: [-0.52266335 -0.98801214]
+     [INFO] d_grad_x for instance 8: 0.000896947574801743
+     [INFO] Updating instance 8 from (40.32394027709961, 38.49213409423828) to (39.94472885131836, 37.854637145996094) with displacement (-0.3792107105255127, -0.6374971866607666)
+     [INFO] p_inst for instance 9: [0.37921107 0.63749707]
+     [INFO] d_grad_x for instance 9: 0.008512236177921295
+     [INFO] Updating instance 9 from (42.5, 52.5) to (42.5, 52.5) with displacement (3.5762786865234375e-07, -1.1920928955078125e-07)
+[INFO] iter 5 done: prev_eq_2: 20.069141387939453, curr_eq_2: 20.355825424194336, delta_eq_2: 0.2866840362548828
+     [INFO] WA:  19.167534
+     [INFO] Density:  1.1882918
+     [INFO] p_inst for instance 0: [-0.4156149   0.16684183]
+     [INFO] d_grad_x for instance 0: 0.0012039835564792156
+     [INFO] Updating instance 0 from (37.56327819824219, 40.05149459838867) to (37.14766311645508, 40.21833801269531) with displacement (-0.41561490297317505, 0.16684183478355408)
+     [INFO] p_inst for instance 1: [0.49343935 0.5065681 ]
+     [INFO] d_grad_x for instance 1: 0.003366983262822032
+     [INFO] Updating instance 1 from (37.730812072753906, 48.089332580566406) to (37.80863571166992, 48.76274108886719) with displacement (0.07782444357872009, 0.6734099388122559)
+     [INFO] p_inst for instance 2: [-0.47149524 -0.03775746]
+     [INFO] d_grad_x for instance 2: -0.013082392513751984
+     [INFO] Updating instance 2 from (46.7034912109375, 43.465782165527344) to (46.30982208251953, 44.10143280029297) with displacement (-0.39367079734802246, 0.635652482509613)
+     [INFO] p_inst for instance 3: [ 0.5725415  -0.58339614]
+     [INFO] d_grad_x for instance 3: 0.004160345997661352
+     [INFO] Updating instance 3 from (43.97285461425781, 46.02922821044922) to (44.15172576904297, 46.081485748291016) with displacement (0.17887067794799805, 0.05225634574890137)
+     [INFO] p_inst for instance 4: [-0.17887038 -0.05225638]
+     [INFO] d_grad_x for instance 4: -0.0020013954490423203
+     [INFO] Updating instance 4 from (37.0, 38.0) to (37.0, 38.0) with displacement (2.980232238769531e-07, -2.9802322387695312e-08)
+     [INFO] p_inst for instance 5: [-0.10214478  0.17919317]
+     [INFO] d_grad_x for instance 5: 0.0018158536404371262
+     [INFO] Updating instance 5 from (35.99198532104492, 48.352291107177734) to (35.88983917236328, 48.5314826965332) with displacement (-0.10214447975158691, 0.1791931390762329)
+     [INFO] p_inst for instance 6: [ 0.5192052  -0.02560565]
+     [INFO] d_grad_x for instance 6: -0.0618157759308815
+     [INFO] Updating instance 6 from (47.50226593017578, 32.516422271728516) to (47.91932678222656, 32.67000961303711) with displacement (0.4170607328414917, 0.1535874903202057)
+     [INFO] p_inst for instance 7: [-0.27536315  0.2053203 ]
+     [INFO] d_grad_x for instance 7: 0.027529509738087654
+     [INFO] Updating instance 7 from (33.583946228027344, 36.41610336303711) to (33.725643157958984, 36.7750129699707) with displacement (0.14169758558273315, 0.3589077889919281)
+     [INFO] p_inst for instance 8: [-0.51465786 -0.9751365 ]
+     [INFO] d_grad_x for instance 8: -0.0036659862380474806
+     [INFO] Updating instance 8 from (39.94472885131836, 37.854637145996094) to (39.57176971435547, 37.238407135009766) with displacement (-0.37296026945114136, -0.6162286996841431)
+     [INFO] p_inst for instance 9: [0.3729605 0.6162286]
+     [INFO] d_grad_x for instance 9: 0.008254442363977432
+     [INFO] Updating instance 9 from (42.5, 52.5) to (42.5, 52.5) with displacement (2.384185791015625e-07, -1.1920928955078125e-07)
+[INFO] iter 6 done: prev_eq_2: 20.355825424194336, curr_eq_2: 20.84707260131836, delta_eq_2: 0.49124717712402344
+     [INFO] WA:  19.67374
+     [INFO] Density:  1.1733321
