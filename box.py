@@ -1,11 +1,12 @@
 import numpy as np
 
 class Box:
-    def __init__(self, box_name, llx, lly, width, height, net_name):
+    def __init__(self, box_name, llx, lly, width, height, net_name_list):
         self.box_name = box_name
         self.width = width
         self.height = height
-        self.net_name = net_name
+        # self.net_name = net_name
+        self.net_name_list = net_name_list
         # lower left corner
         self.llx = llx
         self.lly = lly
@@ -87,6 +88,12 @@ class Box:
         """
         self.dx *= self.decay
         self.dy *= self.decay
+        
+    def add_net_name(self, net_name):
+        """
+        add a net name to the net name list
+        """
+        self.net_name_list.append(net_name)
 
     def self_rotate(self):
         """
