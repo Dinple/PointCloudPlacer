@@ -125,4 +125,15 @@ class Box:
             self.rotation += 360
         # print("[INFO] Box %s: rotation: %f" % (self.box_name, self.rotation))
 
+    def overlapping_area(self, box):
+        """
+        compute the overlapping area of two boxes
+        """
+        # compute the overlapping area
+        dx = min(self.urx, box.urx) - max(self.llx, box.llx)
+        dy = min(self.ury, box.ury) - max(self.lly, box.lly)
+        if (dx >= 0) and (dy >= 0):
+            return dx * dy
+        else:
+            return 0
         

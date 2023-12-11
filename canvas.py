@@ -210,6 +210,18 @@ class PCBCanvas:
                 box.dy + rand_dy,
             )
 
+    def total_overlapping_area(self):
+        """
+        compute the total overlapping area of the boxes
+        """
+        total_overlapping_area = 0
+        for i, box in enumerate(self.iter_box()):
+            for j, box_neighbor in enumerate(self.iter_box()):
+                if i != j:
+                    overlapping_area = box.overlapping_area(box_neighbor)
+                    total_overlapping_area += overlapping_area
+        return total_overlapping_area
+
     def kd_tree_based_boxes_collision_detection(self, scale=1.0):
         """
         detect the collision between boxes using kd tree
